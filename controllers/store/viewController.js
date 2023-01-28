@@ -21,7 +21,7 @@ const viewController = {
     res.render("store/New");
   },
   redirectHome(req, res) {
-    res.redirect("cart/Index");
+    res.redirect("/store/");
     //res.redirect(RESOURCE_PATH);
   },
   redirectShow(req, res) {

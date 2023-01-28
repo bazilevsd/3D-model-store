@@ -8,18 +8,18 @@ class Show extends React.Component {
   render() {
     const { _id, name, image, price } = this.props;
     const imageSource = `https://drive.google.com/uc?export=view&id=${image}`;
-    async function saveData() {
-      try {
-        await CartItem.create({
-          name: `${name}`,
-          image: `${image}`,
-          price: `${price}`,
-        });
-      } catch (err) {
-        console.log(err);
-      }
-    }
-    //saveData();
+    // async function saveData() {
+    //   try {
+    //     await CartItem.create({
+    //       name: `${name}`,
+    //       image: `${image}`,
+    //       price: `${price}`,
+    //     });
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // }
+    // //saveData();
     return (
       <Layout>
         <div className="flex justify-start px-8">
@@ -38,25 +38,35 @@ class Show extends React.Component {
           </div>
 
           <div className="flex flex-col justify-start pl-32 content-around space-y-8">
-            <a href={`/cart/`}>
+            {/* <a href={`/cart/`}>
               <Button onClick={saveData}>Add to a Cart</Button>
-            </a>
-            {/* <form action="/cart" method="POST">
-              <h1 className="text-white">New store item</h1>
-              <p className="text-white">Name:</p>
-              <input type="text" name="name" />
+            </a> */}
+            <form action="/cart" method="POST">
+              {/* <h1 className="text-white">New store item</h1> */}
+              {/* <p className="text-white">Name:</p> */}
+              <input type="hidden" name="name" value={name} />
 
-              <p className="text-white">Image:</p>
-              <input type="text" name="image" />
-              <p className="text-white">Price:</p>
-              <input type="number" name="price" />
+              {/* <p className="text-white">Image:</p> */}
+              <input
+                type="hidden"
+                name="image"
+                value={image}
+                defaulValue={image}
+              />
+              {/* <p className="text-white">Price:</p> */}
+              <input type="hidden" name="price" value={price} />
               <br />
-              <input type="submit" name="" value="Add to a cart" />
-            </form> */}
-            {/* <a href={`/store/${_id}/edit`}>
+              <input
+                className="py-4 px-8 mr-2 mb-2 text-m font-medium text-stone-900 focus:outline-none bg-white rounded-lg border border-stone-200 hover:bg-stone-100 hover:text-grey-700 focus:z-10 focus:ring-4 focus:ring-stone-200 dark:focus:ring-stone-700 dark:bg-stone-800 dark:text-stone-200 dark:border-stone-600 dark:hover:text-white dark:hover:bg-stone-700"
+                type="submit"
+                name=""
+                value="Add to a cart"
+              />
+            </form>
+          </div>
+          {/* <a href={`/store/${_id}/edit`}>
               <Button>Edit</Button>
             </a> */}
-          </div>
           {/* <div className="flex flex-col justify-start pl-32 content-around space-y-8">
             <a href={`/store/${_id}/edit`}>
               <Button>Edit</Button>

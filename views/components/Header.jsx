@@ -15,7 +15,9 @@ class Header extends React.Component {
         <a className="mr-3 text-white" href="/user/logout">
           <Text>Logout</Text>
         </a>
-
+        <a className="mr-3 text-white" href="/store/new">
+          <Text>Sell</Text>
+        </a>
         <a className="mr-3 text-white" href="/cart/">
           <Text>Cart</Text>
         </a>

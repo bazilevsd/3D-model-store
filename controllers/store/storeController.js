@@ -5,6 +5,7 @@ const router = express.Router();
 const dataController = require("./dataController");
 const viewController = require("./viewController");
 //const apiController = require("./apiController");
+const User = require("../../models/user");
 
 const StoreItem = require("../../models/store");
 const seed = require("../../seed");
@@ -66,7 +67,16 @@ router.put("/:id", dataController.update, viewController.redirectShow);
 
 // Create
 router.post("/", dataController.create, viewController.redirectHome);
+const admin = User.findOne({ username: "darya" });
+router.use((req, res, next) => {
+  console.log("session", req.session);
 
+  if (req.session.loggedIn && admin) {
+    next();
+  } else {
+    res.redirect("/user/login");
+  }
+});
 // Edit
 router.get("/:id/edit", dataController.show, viewController.edit);
 

@@ -7,7 +7,7 @@ class Signup extends React.Component {
     return (
       <Layout>
         <div className="flex justify-center">
-          <h1 className="text-4xl text-stone-900 py-4 ">Signup</h1>
+          <h1 className="text-4xl text-stone-900 py-4">Signup</h1>
         </div>
         <main>
           <form
