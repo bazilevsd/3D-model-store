@@ -1,12 +1,11 @@
 const React = require("react");
 const Text = require("../components/Text");
 const Layout = require("../components/Layout");
-//const data = require("../../models/cartItem")
 
 class Edit extends React.Component {
   render() {
     const { _id, name } = this.props.item;
-    console.log("edit props", this.props.item);
+    //console.log("edit props", this.props.item);
 
     return (
       <Layout>

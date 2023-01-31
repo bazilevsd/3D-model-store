@@ -5,8 +5,10 @@ const Footer = require("./Footer");
 class Layout extends React.Component {
   render() {
     const { children } = this.props;
-    console.log("children of map", JSON.stringify(children));
-    const banner = `https://drive.google.com/uc?export=view&id=1bTCqmtW5-IdpL1i4F1tcpiJ7-eWn-p8d`;
+    //console.log("children of map", JSON.stringify(children));
+    //https://drive.google.com/file/d/1o_vDB0GN1qlt8jji2OguJD6ZW9QIkLTT/view?usp=share_link
+    const banner = `https://drive.google.com/uc?export=view&id=1o_vDB0GN1qlt8jji2OguJD6ZW9QIkLTT`;
+    //const banner = `https://drive.google.com/uc?export=view&id=1bTCqmtW5-IdpL1i4F1tcpiJ7-eWn-p8d`;
     return (
       <html>
         <head>
@@ -18,7 +20,7 @@ class Layout extends React.Component {
           <div className="relative flex justify-start items-start">
             <img className="z-5" src={banner} alt="" />
             <div className="px-20 py-32 absolute z-50 flex flex-col">
-              <h1 className="text-6xl text-stone-500">3D Store</h1>
+              <h1 className="text-6xl text-stone-500">3D Model Store</h1>
               <h2 className="text-4xl text-stone-200 py-6">
                 for all your needs
               </h2>

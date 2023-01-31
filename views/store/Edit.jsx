@@ -1,18 +1,17 @@
 const React = require("react");
 const Text = require("../components/Text");
 const Layout = require("../components/Layout");
-//const data = require("../../models/storeItem")
 
 class Edit extends React.Component {
   render() {
     const { _id, name } = this.props.item;
-    console.log("edit props", this.props.item);
+    //console.log("edit props", this.props.item);
 
     return (
       <Layout>
         <form
           className="flex justify-center"
-          action={`store/${_id}?_method=PUT`}
+          action={`/store/${_id}?_method=PUT`}
           method="POST"
         >
           <div className="flex flex-col py-8">

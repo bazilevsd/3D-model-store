@@ -25,7 +25,8 @@ const viewController = {
     //res.redirect(RESOURCE_PATH);
   },
   redirectShow(req, res) {
-    res.redirect(RESOURCE_PATH + `/${req.params.id}`);
+    res.redirect("/store/");
+    //res.redirect(RESOURCE_PATH + `/${req.params.id}`);
   },
 };
 

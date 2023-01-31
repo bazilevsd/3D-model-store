@@ -6,7 +6,7 @@ const ItemPost = require("./ItemPost");
 class Index extends React.Component {
   render() {
     const { items } = this.props;
-    console.log("props on main index", this.props);
+    //console.log("props on main index", this.props);
     return (
       <Layout>
         <a href="/"></a>

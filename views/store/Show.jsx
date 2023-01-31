@@ -51,7 +51,7 @@ class Show extends React.Component {
                 type="hidden"
                 name="image"
                 value={image}
-                defaulValue={image}
+                // defaulValue={image}
               />
               {/* <p className="text-white">Price:</p> */}
               <input type="hidden" name="price" value={price} />

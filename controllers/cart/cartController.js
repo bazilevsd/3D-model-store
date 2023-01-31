@@ -4,7 +4,6 @@ const router = express.Router();
 // Data controller
 const dataController = require("./dataController");
 const viewController = require("./viewController");
-//const apiController = require("./apiController");
 
 router.use((req, res, next) => {
   console.log("session", req.session);
@@ -17,26 +16,7 @@ router.use((req, res, next) => {
 });
 
 /**
- * Fruits - Api routes
- */
-
-// // Index - Api
-// router.get("/api", dataController.index, apiController.index);
-
-// // Show - Api
-// router.get("/api/:id", dataController.show, apiController.show);
-
-// // Delete - Api
-// router.delete("/api/:id", dataController.destroy, apiController.show);
-
-// // Update - Api
-// router.put("/api/:id", dataController.update, apiController.show);
-
-// // Create - Api
-// router.post("/api/", dataController.create, apiController.show);
-
-/**
- * Fruits
+ * Cart
  */
 // Index
 router.get("/", dataController.index, viewController.index);
@@ -44,7 +24,7 @@ router.get("/", dataController.index, viewController.index);
 // New
 router.get("/new", viewController.newView);
 
-// Show - Route
+// Show
 router.get("/:id", dataController.show, viewController.show);
 
 // Delete

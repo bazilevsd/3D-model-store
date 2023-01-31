@@ -3,7 +3,7 @@ const React = require("react");
 class ItemPost extends React.Component {
   render() {
     const { post } = this.props;
-    console.log("Props on ItemPost", this.props);
+    //console.log("Props on ItemPost", this.props);
     //console.log("item image", post.image);
     const imageSource = `https://drive.google.com/uc?export=view&id=${post.image}`;
     return (
