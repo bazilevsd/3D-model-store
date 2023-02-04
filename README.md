@@ -1,5 +1,7 @@
 # 3D Model Store
 
+Heroku - https://store-3d-model-app.herokuapp.com/store/
+
 Treello: https://trello.com/b/jmAdvnSl/daryas-project-2
 
 # About the project
